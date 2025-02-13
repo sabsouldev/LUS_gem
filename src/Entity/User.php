@@ -106,6 +106,10 @@ class User
 
     public function getRoles(): array
     {
+        $roles = $this->roles;
+        //Assure que chaque utilisateur a le rôle ROLE_USER
+        $roles[] = 'ROLE_USER';
+        
         return $this->roles;
     }
 
